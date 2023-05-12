@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 import '../models/number.dart';
@@ -40,7 +41,16 @@ class Item extends StatelessWidget {
             flex: 1,
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              try {
+ AudioCache player = AudioCache(prefix: 'assets/sounds/numbers/');
+              player.play(number.sound);
+              }
+              catch (ex){
+                print(ex);
+              }
+             
+            },
             icon: Icon(
               Icons.play_arrow,
               color: Colors.white,
