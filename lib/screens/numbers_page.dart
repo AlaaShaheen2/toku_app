@@ -5,59 +5,59 @@ import '../models/number.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
-  final List<Number> numbers = const [
-    Number(
+  final List<Items> numbers = const [
+    Items(
         sound: 'number_one_sound.mp3',
         image: 'assets/images/numbers/number_one.png',
         jbName: 'ichi',
         enName: 'one'),
-    Number(
+    Items(
         sound: 'number_two_sound.mp3',
         image: 'assets/images/numbers/number_two.png',
         jbName: 'Ni',
         enName: 'two'),
-    Number(
+    Items(
       sound: 'number_three_sound.mp3',
       image: 'assets/images/numbers/number_three.png',
       jbName: 'San',
       enName: 'three',
     ),
-    Number(
+    Items(
       sound: 'number_four_sound.mp3',
       image: 'assets/images/numbers/number_four.png',
       jbName: 'Shi',
       enName: 'four',
     ),
-    Number(
+    Items(
       sound: 'number_five_sound.mp3',
       image: 'assets/images/numbers/number_five.png',
       jbName: 'Go',
       enName: 'five',
     ),
-    Number(
+    Items(
       sound: 'number_six_sound.mp3',
       image: 'assets/images/numbers/number_six.png',
       jbName: 'Roku',
       enName: 'six',
     ),
-    Number(
+    Items(
         sound: 'number_seven_sound.mp3',
         image: 'assets/images/numbers/number_seven.png',
         jbName: 'Sebun',
         enName: 'seven'),
-    Number(
+    Items(
       sound: 'number_eight_sound.mp3',
       image: 'assets/images/numbers/number_eight.png',
       jbName: 'hachi',
       enName: 'eight',
     ),
-    Number(
+    Items(
       sound: 'number_nine_sound.mp3',
       image: 'assets/images/numbers/number_nine.png',
       jbName: 'Kyū',
       enName: 'nine',
     ),
-    Number(
+    Items(
       sound: 'number_ten_sound.mp3',
       image: 'assets/images/numbers/number_ten.png',
       jbName: 'Jū',
@@ -75,7 +75,10 @@ class NumbersPage extends StatelessWidget {
       body: ListView.builder(
           itemCount: numbers.length,
           itemBuilder: (context, index) {
-            return Item(number: numbers[index]);
+            return Item(
+              number: numbers[index],
+              color: Color(0xff6D597A),
+            );
           }),
     );
   }
