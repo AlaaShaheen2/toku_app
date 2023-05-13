@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import '../models/number.dart';
 
 class Item extends StatelessWidget {
-  const Item({super.key, required this.number, required this.color});
+  const Item(
+      {super.key,
+      required this.number,
+      required this.color,
+      required this.itemType});
   final Items number;
   final Color color;
+  final String itemType;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +24,7 @@ class Item extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 18),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -44,13 +50,12 @@ class Item extends StatelessWidget {
           IconButton(
             onPressed: () {
               try {
- AudioCache player = AudioCache(prefix: 'assets/sounds/numbers/');
-              player.play(number.sound);
-              }
-              catch (ex){
+                AudioCache player =
+                    AudioCache(prefix: 'assets/sounds/$itemType/');
+                player.play(number.sound);
+              } catch (ex) {
                 print(ex);
               }
-             
             },
             icon: Icon(
               Icons.play_arrow,

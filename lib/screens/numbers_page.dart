@@ -78,6 +78,7 @@ class NumbersPage extends StatelessWidget {
             return Item(
               number: numbers[index],
               color: Color(0xff6D597A),
+              itemType: 'numbers',
             );
           }),
     );

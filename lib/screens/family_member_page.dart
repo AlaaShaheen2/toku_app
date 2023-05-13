@@ -75,6 +75,7 @@ class FamilyMemberPage extends StatelessWidget {
             return Item(
               number: familyMembers[index],
               color: Color(0xffB56576),
+              itemType: 'family_members',
             );
           }),
     );
